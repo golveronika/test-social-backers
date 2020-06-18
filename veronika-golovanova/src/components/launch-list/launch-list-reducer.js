@@ -33,7 +33,12 @@ const openedDetails = (state = null, action) => {
 const launchesCollection = (state = null, action) => {
 	switch (action.type) {
 		case actions.SET_LAUNCHES:
-			return action.data
+			const sort_data = action.data.sort((a, b) => {
+				if(a.mission_name < b.mission_name) { return -1; }
+				if(a.mission_name > b.mission_name) { return 1; }
+				return 0;
+			})
+			return sort_data
 		default:
 			return state
 	}
