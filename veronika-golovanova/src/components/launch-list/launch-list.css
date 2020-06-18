@@ -1,0 +1,44 @@
+.sbks-launchList {
+	padding: 2em;
+	text-align: left;
+}
+
+.sbks-launchList-launch {
+	padding: 1em;
+	margin: 0 2em;
+	border-top: 1px dotted #ccc;
+}
+
+.sbks-launchList-row {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+}
+
+.sbks-launchList-name {
+	font-weight: bold;
+	width: 50%;
+}
+
+.sbks-launchList-date {
+	width: 25%;
+}
+
+.sbks-launchList-date {
+	width: 25%;
+}
+
+.sbks-launchList-detail {
+	margin: 1em 0;
+	background: #eee;
+	padding: 2em;
+}
+
+.sbks-launchList .sbks-input {
+	text-align: right;
+	padding: 0 2em 0 0;
+}
+
+.sbks-launchList-row .sbks-button {
+	min-width: 8em;
+}

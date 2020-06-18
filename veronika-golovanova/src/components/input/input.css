@@ -1,0 +1,16 @@
+.sbks-input input {
+	font-size: large;
+	padding: 10px 20px;
+}
+
+.sbks-input .sbks-button {
+	background: none;
+}
+
+.sbks-input .sbks-button:hover {
+	background: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	transition: none;
+}

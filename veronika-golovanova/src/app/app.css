@@ -1,0 +1,18 @@
+.sbks-app {
+  text-align: center;
+  font-size: large;
+}
+
+.sbks-app-logo {
+  font-size: 100px;
+}
+
+.sbks-app-header {
+  background-color: #222;
+  padding: 20px;
+  color: white;
+}
+
+.sbks-app-title {
+  font-size: 1.5em;
+}
