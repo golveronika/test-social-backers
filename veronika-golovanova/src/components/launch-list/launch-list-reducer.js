@@ -12,7 +12,7 @@ const REDUCER_ID = 'launch-list'
 
 export const actions = {
 	SET_LAUNCHES: `${REDUCER_ID}/setLaunches`,
-	FILTER: `${REDUCER_ID}/filter`,
+	FILTER: `${REDUCER_ID}/setFilter`,
 	OPEN_DETAILS: `${REDUCER_ID}/openDetail`,
 	CLOSE_DETAILS: `${REDUCER_ID}/closeDetail`,
 	...createLoadingActions(REDUCER_ID),
