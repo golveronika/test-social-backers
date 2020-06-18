@@ -11,6 +11,7 @@ import {
 const REDUCER_ID = 'launch-list'
 
 export const actions = {
+	SET_DETAILS: `SET_LAUNCHES`,
 	SET_LAUNCHES: `${REDUCER_ID}/setLaunches`,
 	FILTER: `${REDUCER_ID}/setFilter`,
 	OPEN_DETAILS: `${REDUCER_ID}/openDetail`,
@@ -20,6 +21,8 @@ export const actions = {
 }
 
 const openedDetails = (state = null, action) => {
+
+	console.log(action);
 	switch (action.type) {
 		case actions.OPEN_DETAILS:
 			return action.flightNumber
@@ -44,9 +47,25 @@ const launchesCollection = (state = null, action) => {
 	}
 }
 
+
+const getDetails = (state = null, action) => {
+
+	console.log(action);
+
+	return state
+
+	switch (action.type) {
+		case actions.SET_DETAILS:
+			return action.data
+		default:
+			return state
+	}
+}
+
 export default combineReducers({
 	isLoading: createLoadingReducer(actions),
 	filterValue: createFilterReducer(actions),
 	openedDetails,
 	launchesCollection,
+	getDetails
 })

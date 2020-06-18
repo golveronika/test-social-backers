@@ -7,10 +7,11 @@ module.exports = async function(req, res, next) {
 		const launches = await response.json()
 
 		const output = launches.map(
-			({ flight_number, mission_name, launch_date_utc }) => ({
+			({ flight_number, mission_name, launch_date_utc, details }) => ({
 				flight_number,
 				mission_name,
-				launch_date: launch_date_utc
+				launch_date: launch_date_utc,
+				fly_details: details
 			})
 		)
 

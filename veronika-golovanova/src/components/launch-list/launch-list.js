@@ -29,7 +29,9 @@ class LaunchList extends Component {
 	}
 
 	renderLaunch(launch) {
-		const { mission_name, launch_date, flight_number, details } = launch
+		const { mission_name, launch_date, flight_number, details, fly_details } = launch
+
+		// console.log("launch", launch);
 		const { switchDetails } = this.props
 
 		return (
@@ -48,7 +50,7 @@ class LaunchList extends Component {
 				</div>
 				{details && (
 					<div className={`${BASE_CLASS_NAME}-detail`}>
-						TODO: Show launch details here.
+						{fly_details}
 					</div>
 				)}
 			</div>

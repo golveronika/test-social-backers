@@ -28,6 +28,25 @@ export const switchDetails = (flightNumber) => (dispatch, getState) => {
 	if (currentDetails === flightNumber) {
 		dispatch({ type: actions.CLOSE_DETAILS })
 	} else {
+		dispatch({ type: actions.SET_DETAILS, flightNumber })
 		dispatch({ type: actions.OPEN_DETAILS, flightNumber })
 	}
+}
+
+
+export const loadDetails = (flightNumber) => async (dispatch, getState) => {
+
+	dispatch({ type: actions.LOAD_START })
+	try {
+		const response = await fetch(`${endpoints.LAUNCHES_ID}${flightNumber}`)
+		if (response.ok) {
+			const data = await response.json()
+			dispatch({ type: actions.SET_DETAILS, data })
+		} else {
+			logError(response.statusText)
+		}
+	} catch (error) {
+		logError(error)
+	}
+	dispatch({ type: actions.LOAD_FINISH })
 }
